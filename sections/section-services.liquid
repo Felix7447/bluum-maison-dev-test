@@ -1,34 +1,58 @@
+{% liquid
+  assign subheading = section.settings.subheading
+  assign paragraph = section.settings.paragraph
+  assign services_title = section.settings.services_title
+%}
+
 <div class="section-services">
   <div class="services-paragraph">
-    <h4>Fashion, E-Commerce</h4>
-    <p>Lorem ipsum dolor sit amet consectetur. Id mauris viverra condimentum imperdiet. Orci pellentesque et massa at orci arcu mauris turpis ac. Ullamcorper viverra ullamcorper aliquam non at euismod leo ut eu. Quam tellus eu venenatis scelerisque quam turpis. Sit auctor aliquet libero tristique. Amet vitae phasellus turpis turpis maecenas. Pretium amet sed enim in platea dui volutpat consequat.</p>
+    <h4>{{ subheading }}</h4>
+    <p>{{ paragraph }}</p>
   </div>
   <div class="services-services">
-    <h2>Services</h2>
+    <h2>{{ services_title }}</h2>
     <ul>
-      <li>Branding</li>
-      <li>Packaging</li>
-      <li>Print Design</li>
-      <li>Ecommerce Design</li>
-      <li>Shopify Development</li>
-      <li>Brand Strategy</li>
+      {% for block in section.blocks %}
+        <li>{{ block.settings.service }}</li>
+      {% endfor %}
     </ul>
   </div>
 </div>
 
 {% schema %}
   {
-    "name": "services",
+    "name": "Services",
     "settings": [
       {
         "type": "text",
-        "id": "services",
-        "label": "services"
+        "id": "subheading",
+        "label": "Subheading"
+      }, {
+        "type": "textarea",
+        "id": "paragraph",
+        "label": "Paragraph"
+      }, {
+        "type": "text",
+        "id": "services_title",
+        "label": "Services title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Service",
+        "type": "block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "service",
+            "label": "Service"
+          }
+        ]
       }
     ],
     "presets": [
       {
-        "name": "services"
+        "name": "Services"
       }
     ]
   }
