@@ -1,0 +1,73 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-1": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "main-menu",
+            "title": "",
+            "column_width": 33
+          }
+        },
+        "15d899f2-0bc2-43a1-8a0c-2ee35d37d23d": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "footer",
+            "title": "",
+            "column_width": 33
+          }
+        },
+        "12e8e95d-1a1e-4f2d-b3f7-c415a85ef231": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "footer",
+            "title": "",
+            "column_width": 33
+          }
+        }
+      },
+      "block_order": [
+        "footer-1",
+        "15d899f2-0bc2-43a1-8a0c-2ee35d37d23d",
+        "12e8e95d-1a1e-4f2d-b3f7-c415a85ef231"
+      ],
+      "settings": {
+        "logo_image_width": 100,
+        "overlay_opacity": 75,
+        "overlay_color": "#ffffff",
+        "footer_secondary_linklist": "",
+        "footer_payment_enable": false,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "type": "currency",
+        "anchor_logo": "shopify:\/\/shop_images\/Arq_Primary_Logo_Black-Shopify-Development-Design-theme-branding-wellness-lifestyle-agency.svg",
+        "padding_top": 75,
+        "padding_bottom": 65
+      }
+    },
+    "popups": {
+      "type": "popups",
+      "blocks": {
+        "popups-0": {
+          "type": "cookie",
+          "settings": {
+            "position": "popup-cookies--left",
+            "show_cookies_popup": true
+          }
+        }
+      },
+      "block_order": [
+        "popups-0"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "footer",
+    "popups"
+  ]
+}

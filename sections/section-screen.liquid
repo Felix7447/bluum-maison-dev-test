@@ -1,0 +1,30 @@
+{% liquid
+  assign portfolio = section.settigns.portfolio
+%}
+
+<div class="portfolio-section">
+  <div class="screen-container">
+    <div class="screen" id="screen">
+      {{ section.settings.portfolio | image_url: width: 1440 | image_tag }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Portfolio",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "portfolio",
+        "label": "Portfolio Image"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "Portfolio"
+      }
+    ]
+  }
+{% endschema %}
